@@ -14,12 +14,12 @@ GNU Lesser General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License
 along with SharpPcap.  If not, see <http://www.gnu.org/licenses/>.
 */
-/* 
+/*
  * Copyright 2010 Chris Morgan <chmorgan@gmail.com>
  */
 
 
-namespace SharpPcap.Npcap
+namespace SharpPcap.LibPcap
 {
     /// <summary>
     /// The types of transmit modes allowed by the Npcap specific send queue
