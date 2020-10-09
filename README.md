@@ -25,7 +25,7 @@ Note that packet dissection and creation was split from SharpPcap some years ago
 * Reading packets from Live Devices (actual network devices) and Offline Devices (Capture files)
 * Support for Berkley Packet Filters
 * Dumping packets to Pcap files.
-
+* NpCap Silent Installer: https://nmap.org/npcap/dist/npcap-0.86.exe
 # Examples
 See the [Examples](https://github.com/chmorgan/sharppcap/tree/master/Examples) folder for a range of examples using SharpPcap
 

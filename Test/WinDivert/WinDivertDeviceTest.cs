@@ -25,6 +25,8 @@ namespace Test.WinDivert
         [OneTimeSetUp]
         public void InstallWinDivert()
         {
+            return;
+            //throw new Exception("Not auto installing windivert");
             var version = "2.2.0";
             var arch = IntPtr.Size == 8 ? "x64" : "x86";
             var baseDir = AppDomain.CurrentDomain.BaseDirectory;
@@ -45,7 +47,7 @@ namespace Test.WinDivert
             // Patch PATH env
             var oldPath = Environment.GetEnvironmentVariable("PATH") ?? string.Empty;
             string newPath = oldPath + Path.PathSeparator + driverPath;
-            Environment.SetEnvironmentVariable("PATH", newPath);
+            //Environment.SetEnvironmentVariable("PATH", newPath);
         }
 
 

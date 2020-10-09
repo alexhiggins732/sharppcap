@@ -41,6 +41,10 @@ namespace Test
                 {
                     continue;
                 }
+                if (nic?.GetIPProperties().GatewayAddresses.Count() == 0)
+                {
+                    continue;
+                }
                 LinkLayers link;
                 try
                 {
@@ -77,13 +81,13 @@ namespace Test
             var device = GetPcapDevice();
             Console.WriteLine($"Using device {device}");
             var received = new List<RawCapture>();
-            device.Open(DeviceMode.Normal, 1);
+            device.Open(DeviceMode.Normal, 500);
             device.Filter = filter;
             try
             {
                 routine(device);
                 // waiting for any queued packets to be sent
-                Thread.Sleep(10);
+                Thread.Sleep(5000);
                 while (true)
                 {
                     var packet = device.GetNextPacket();
